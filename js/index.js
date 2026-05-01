@@ -1,14 +1,14 @@
 //black_header
 let userHeight = window.innerHeight
-window.addEventListener('scroll', () => { 
+window.addEventListener('scroll', () => {
     let userScroll = window.scrollY
     if (userScroll > userHeight) {
         document.querySelector('.black_header').style.opacity = 1
         document.querySelector('.black_header').style.backgroundColor = '#fff'
     } else {
-     let index = userScroll / userHeight
-     document.querySelector('.black_header').style.opacity = index
-     document.querySelector('.black_header').style.backgroundColor = '#000'
+        let index = userScroll / userHeight
+        document.querySelector('.black_header').style.opacity = index
+        document.querySelector('.black_header').style.backgroundColor = '#000'
     }
 });
 
@@ -24,13 +24,13 @@ for (let el of accordeon) {
             let block = el
             let numberPic = el.getAttribute('data-hover')
             pic = document.querySelector(`.piramid_img${numberPic}`)
-            openAccordBlock(block,pic)
+            openAccordBlock(block, pic)
         } else {
             let numberPic = el.getAttribute('data-hover')
             pic = document.querySelector(`.piramid_img${numberPic}`)
             closeAccordBlock(pic)
         }
-        
+
     }
 }
 for (let el of accordeon) {
@@ -38,26 +38,26 @@ for (let el of accordeon) {
         el.classList.add('hover')
         let imgNeiro = el.getAttribute('data-hover')
         let img = document.querySelector(`.piramid_img${imgNeiro}`)
-        if (img.classList.contains('active')){
+        if (img.classList.contains('active')) {
             return
         } else {
-            let hoverImg =  img.getAttribute('data-img_hover')
+            let hoverImg = img.getAttribute('data-img_hover')
             img.src = `img/page1/piramid/${hoverImg}`
         }
 
     }
-    el.onmouseout= () => {      
+    el.onmouseout = () => {
         el.classList.remove('hover')
         let imgNeiro = el.getAttribute('data-hover')
         let img = document.querySelector(`.piramid_img${imgNeiro}`)
-        if (img.classList.contains('active')){
-            let hoverImg =  img.getAttribute('data-img_open')
+        if (img.classList.contains('active')) {
+            let hoverImg = img.getAttribute('data-img_open')
             img.src = `img/page1/piramid/${hoverImg}`
         } else {
-            let hoverImg =  img.getAttribute('data-img_close')
+            let hoverImg = img.getAttribute('data-img_close')
             img.src = `img/page1/piramid/${hoverImg}`
         }
-        
+
     }
 }
 
@@ -70,7 +70,7 @@ for (let el of accordeon__img) {
             let blockNumber = el.getAttribute('data-elem_p')
             block = document.querySelector(`.piramid_acc${blockNumber}`)
             pic = el
-            openAccordBlock(block,pic)
+            openAccordBlock(block, pic)
         } else {
             let blockNumber = el.getAttribute('data-elem_p')
             block = document.querySelector(`.piramid_acc${blockNumber}`)
@@ -82,14 +82,14 @@ for (let el of accordeon__img) {
 }
 for (let el of accordeon__img) {
     el.onmouseover = () => {
-        if (el.classList.contains('active')) {return}
-        let hoverImg =  el.getAttribute('data-img_hover')
+        if (el.classList.contains('active')) { return }
+        let hoverImg = el.getAttribute('data-img_hover')
         el.src = `img/page1/piramid/${hoverImg}`
         let blockNeiro = el.getAttribute('data-elem_p')
         document.querySelector(`.piramid_acc${blockNeiro}`).classList.add('hover')
     }
-    el.onmouseout= () => {
-        if (el.classList.contains('active')) {return}
+    el.onmouseout = () => {
+        if (el.classList.contains('active')) { return }
         let closeImg = el.getAttribute('data-img_close')
         el.src = `img/page1/piramid/${closeImg}`
         let blockNeiro = el.getAttribute('data-elem_p')
@@ -100,8 +100,8 @@ for (let el of accordeon__img) {
 
 
 
-function openAccordBlock(block,pic) {
-    for (let block of accordeon) {block.classList.remove('active')}
+function openAccordBlock(block, pic) {
+    for (let block of accordeon) { block.classList.remove('active') }
     block.classList.add('active')
 
     for (let pic of accordeon__img) {
@@ -112,10 +112,10 @@ function openAccordBlock(block,pic) {
     let openImg = pic.getAttribute('data-img_open')
     pic.src = `img/page1/piramid/${openImg}`
     pic.classList.add('active')
-    for (let block of accordeon) {block.classList.remove('hover')}
+    for (let block of accordeon) { block.classList.remove('hover') }
 }
 function closeAccordBlock(pic) {
-    for (let block of accordeon) {block.classList.remove('active')}
+    for (let block of accordeon) { block.classList.remove('active') }
     for (let el of accordeon__img) {
         let closeImg = el.getAttribute('data-img_close')
         el.src = `img/page1/piramid/${closeImg}`
@@ -126,32 +126,57 @@ function closeAccordBlock(pic) {
     pic.classList.remove('active')
 }
 
-let MapCitys = [
-    {id:1 ,city:'<span>Главный офис</span> в Москве',phone:'+7 495 374-80-32',adres:'129110, Москва, Олимпийский проспект, д. 16, стр. 5'},
-    {id:2 ,city:'Офис в Санкт-Петербурге',phone:'+7 812 389-44-86',adres:'194017, Санкт-Петербург, д 124 литера А, пом. 58-Н'},
-    {id:3 ,city:'Офис в Уфе',phone:'+7 347 200-80-23',adres:'450022, Республика Башкортостан, Уфа, ул. Менделеева, д. 134/7'},
-    {id:4 ,city:'Офис в Томске',phone:'+7 382 290-45-25',adres:'634041, Томск, Кирова проспект, д. 51а, стр. 5, оф. 528–530'},
-    {id:5 ,city:'Офис в Нижнем Новгороде',phone:'+7 831 262-18-34, доб. 5400',adres:'603073, Нижний Новгород, ул. Композиторская дом 20А'},
-    {id:6 ,city:'Офис в Тольятти',phone:'+7 848 265-03-27',adres:'445004, Тольятти, ул. Базовая, д. 28'},
-    {id:7 ,city:'Офис в Самаре',phone:'не беспокоить',adres:'443068, Самара, ул. Скляренко, 26, БЦ "Панорама"'}
+const mapTooltips = [
+    { id: 1, tip: 'Объекты нефтедобычи' },
+    { id: 2, tip: 'Объекты нефтедобычи и подготовки нефти' },
+    { id: 3, tip: 'Нефтебаза' },
+    { id: 4, tip: 'Нефтебаза' },
+    { id: 5, tip: 'Объекты транспортировки газа' },
+    { id: 6, tip: 'Нефтехимические предприятия' },
+    { id: 7, tip: 'Горно-металлургические предприятия' },
+    { id: 8, tip: 'Объекты атомной отрасли' },
+    { id: 9, tip: 'Проекты “Умный город”' },
+    { id: 10, tip: 'Объекты трубопроводного транспорта нефти' },
+    { id: 11, tip: 'Нефтебаза' },
+    { id: 12, tip: 'Нефтебаза' },
 ]
 
-let allCity = document.querySelectorAll('.city_mini_change')
-for (let el of allCity) {
-    el.onclick = () => {
-        for (let el of allCity) {
-            el.classList.remove('active')
-        }
-        el.classList.add('active')
-        let city = el.getAttribute('data-city')
-        let cityContent = MapCitys[city]
+const allPoints = document.querySelectorAll('.map_point');
+allPoints.forEach((el) => {
+    let hoveredId = 0;
+    el.addEventListener('mouseover', () => {
+        const pointId = el.getAttribute('data-tip-id');
+        hoveredId = pointId;
 
-        document.querySelector('.map_city p').textContent = cityContent.id
-        document.querySelector('.map_city article').innerHTML = cityContent.city
-        document.querySelector('.city_phone').textContent = cityContent.phone
-        document.querySelector('.city_adres').textContent = cityContent.adres
-    }
-}
+        const pointTooltip = mapTooltips.find(el => el.id === Number(pointId));
+        if (!pointTooltip) return;
+
+        const tooltipText = document.getElementById('map-tooltip-text');
+        if (!tooltipText) return;
+        tooltipText.textContent = pointTooltip.tip;
+
+        const tooltipWrapper = document.getElementById('map-tooltip');
+        const anchorX = el.getBoundingClientRect().left;
+        const anchorY = el.getBoundingClientRect().top;
+        if (!anchorX || !anchorY || !tooltipWrapper) return;
+
+        const tooltipLeft = anchorX + el.offsetWidth / 2;
+        tooltipWrapper.style.left = `${tooltipLeft}px`;
+
+        const tooltipTop = anchorY - el.offsetHeight; //13 — gap
+        tooltipWrapper.style.top = `${tooltipTop}px`;
+
+        tooltipWrapper.classList.add('active');
+    });
+
+    el.addEventListener('mouseout', () => {
+        const pointId = el.getAttribute('data-tip-id');
+        if (hoveredId !== pointId) return;
+
+        const tooltipWrapper = document.getElementById('map-tooltip');
+        tooltipWrapper.classList.remove('active');
+    });
+})
 
 let indexCityMap = 0
 document.querySelector('.map_city__img').onclick = () => {
