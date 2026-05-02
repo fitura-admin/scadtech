@@ -97,9 +97,6 @@ for (let el of accordeon__img) {
     }
 }
 
-
-
-
 function openAccordBlock(block, pic) {
     for (let block of accordeon) { block.classList.remove('active') }
     block.classList.add('active')
