@@ -630,7 +630,7 @@ section {
 .section7 .tooltip_text {
   font-family: g-medium;
   color: var(--color-text);
-  font-size: clamp(1.125rem, 0.955rem + 0.68vw, 1.5rem);
+  font-size: 20px;
 }
 .map_point {
   cursor: pointer;
