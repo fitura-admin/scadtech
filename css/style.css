@@ -614,16 +614,18 @@ section {
   padding: 24px 68px;
   border-radius: 20px;
   box-shadow: 0 0 5px var(--color-300grey);
-    border: 1px solid var(--color-400grey);
+  border: 1px solid var(--color-400grey);
 
   z-index: 1;
 
   opacity: 0;
   transform: translate(-50%, 20px);
+
+  pointer-events: none;
 }
 .section7 .wrapper_tooltip.active {
   opacity: 1 !important;
-  transform: translate(-50%, 0) !important;
+  transform: translate(-50%, -50%) !important;
 }
 .section7 .tooltip_text {
   font-family: g-medium;

@@ -163,7 +163,7 @@ allPoints.forEach((el) => {
         const tooltipLeft = anchorX + el.offsetWidth / 2;
         tooltipWrapper.style.left = `${tooltipLeft}px`;
 
-        const tooltipTop = anchorY - el.offsetHeight; //13 — gap
+        const tooltipTop = anchorY - el.offsetHeight;
         tooltipWrapper.style.top = `${tooltipTop}px`;
 
         tooltipWrapper.classList.add('active');
