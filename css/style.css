@@ -491,13 +491,13 @@ section {
   overflow-x: hidden;
 }
 .section5__carusel_left {
-  --items-count: 10;
+  --items-count: 11;
   display: flex;
   width: max-content;
   animation: cvarusel 60s infinite linear;
 }
 .section5__carusel_right {
-  --items-count: 11;
+  --items-count: 14;
   display: flex;
   width: max-content;
   animation: cvarusel2 60s infinite linear;
