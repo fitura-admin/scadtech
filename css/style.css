@@ -501,7 +501,6 @@ section {
   display: flex;
   width: max-content;
   animation: cvarusel2 60s infinite linear;
-  animation-delay: 20s;
   margin-left: calc(var(--item-width) * 4);
 }
 .section5__carusel_left__block {
