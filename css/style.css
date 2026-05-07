@@ -180,6 +180,10 @@ section {
     font-size: var(--font-size20_mob);
     width: 86vw;
   }
+  .section1 > img {
+    width: initial;
+    height: 100%;
+  }
   .section1__block {
     justify-content: space-between;
     flex-wrap: wrap;
