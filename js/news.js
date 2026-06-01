@@ -81,13 +81,15 @@ newsList.forEach(item => {
     newsMap[item.id] = item;
 });
 
+const notHomePage = window.location.href.includes("/pages");
+
 // рендер нижних картинок
 function renderBottomImages(images) {
     modalBottom.innerHTML = '';
 
     images.forEach(src => {
         const img = document.createElement('img');
-        img.src = src;
+        img.src = notHomePage ? "../" + src : src;
         img.alt = '';
         modalBottom.appendChild(img);
     });
@@ -107,7 +109,7 @@ for (let el of news) {
 
         modalDate.textContent = data.date;
         modalTitle.textContent = data.title;
-        modalImg.src = data.images[0]; // первая картинка
+        modalImg.src = notHomePage ? "../" + data.images[0] : data.images[0]; // первая картинка
         modalText.textContent = data.text;
         modalArticle.textContent = data.article;
         modalBody.innerHTML = data.body.replace(/\n/g, '<br>');

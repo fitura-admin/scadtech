@@ -169,9 +169,14 @@ section {
   font-size: var(--font-size24);
   height: 5vw;
 }
+.section1__block__elem span {
+  font-size: 6vw;
+}
 .section1__block__elem article {
   font-family: g-medium;
   font-size: 8.33vw;
+  display: flex;
+  align-items: center;
 }
 @media (max-width: 960px) {
   .section1 > p {
