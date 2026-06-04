@@ -1,0 +1,144 @@
+.map__wrapper {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.map__image {
+    display: block;
+    object-fit: contain;
+    position: relative;
+    top: 4%;
+    left: 4%;
+    z-index: 0;
+    width: 100%;
+    height: auto;
+}
+
+.achievement__point {
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+
+  height: auto;
+  object-fit: contain;
+}
+
+.achievement__point--1 {
+    left: 14%;
+    top: 58%;
+}
+
+.achievement__point--2 {
+    left: 13%;
+    top: 43%;
+}
+
+.achievement__point--3 {
+    left: 16.5%;
+    top: 31.25%;
+}
+
+.achievement__point--4 {
+    left: 19%;
+    top: 50%;
+}
+
+.achievement__point--5 {
+    left: 21%;
+    top: 28.5%;
+}
+
+.achievement__point--6 {
+    left: 25%;
+    top: 32%;
+}
+
+.achievement__point--7 {
+    left: 26%;
+    top: 45.5%;
+}
+
+.achievement__point--8 {
+    left: 31%;
+    top: 52.5%;
+}
+
+.achievement__point--9 {
+    left: 27.5%;
+    top: 62%;
+}
+
+.achievement__point--10 {
+    left: 36%;
+    top: 43.5%;
+}
+
+.achievement__point--11 {
+    left: 39%;
+    top: 63%;
+}
+
+.achievement__point--12 {
+    left: 49.5%;
+    top: 37.5%;
+}
+
+.achievement__point--13 {
+    left: 51%;
+    top: 44.5%;
+}
+
+.achievement__point--14 {
+    left: 55%;
+    top: 60.5%;
+}
+
+.achievement__point--15 {
+    left: 63.5%;
+    top: 67.5%;
+}
+
+.achievement__point--16 {
+    left: 64%;
+    top: 50.5%;
+}
+
+.achievement__point--17 {
+    left: 65%;
+    top: 35%;
+}
+
+.achievement__point--18 {
+    left: 75%;
+    top: 45.5%;
+}
+
+.achievement__point--19 {
+    left: 73%;
+    top: 29.5%;
+}
+
+.achievement__point--20 {
+    left: 85%;
+    top: 33%;
+}
+
+.achievement__point--21 {
+    left: 81%;
+    top: 57%;
+}
+
+.achievement__point--22 {
+    left: 84%;
+    top: 76.5%;
+}
+
+.achievement__point--23 {
+    left: 91%;
+    top: 68.5%;
+}
+
+.achievement__point--24 {
+    left: 89.5%;
+    top: 50.5%;
+}

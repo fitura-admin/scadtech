@@ -1,3 +1,5 @@
+@import url("./partners/main.css");
+@import url("./map/main.css");
 body {
   background-color: #f8f8fafa;
 }
@@ -462,7 +464,7 @@ section {
   align-items: flex-end;
   justify-content: space-between;
   border-radius: 20px;
-  padding: 3.9vw 5.2vw;
+  padding: max(3.9vw, 60px) 5.2vw;
   border: 2px solid var(--color-300grey);
 }
 .section4 > p {
@@ -626,30 +628,31 @@ section {
   border-radius: 20px;
   margin: 10px;
   padding: 0px;
+  overflow: hidden;
 }
-.section7 .wrapper_tooltip {
+.wrapper_tooltip {
   position: fixed;
   background-color: var(--color-pure_white);
-  padding: 24px 68px;
+  padding: min(16px, 1.3vw) min(48px, 3.5vw);
   border-radius: 20px;
   box-shadow: 0 0 5px var(--color-300grey);
   border: 1px solid var(--color-400grey);
 
   z-index: 1;
+  transform: translate(-50%, -50%);
 
   opacity: 0;
-  transform: translate(-50%, 20px);
-
   pointer-events: none;
 }
-.section7 .wrapper_tooltip.active {
-  opacity: 1 !important;
-  transform: translate(-50%, -50%) !important;
+.wrapper_tooltip.active {
+  opacity: 1;
+  z-index: 2;
 }
-.section7 .tooltip_text {
+.tooltip_text {
   font-family: g-medium;
   color: var(--color-text);
-  font-size: 20px;
+  font-size: clamp(0.75rem, 0.523rem + 0.91vw, 1.25rem);
+  white-space: nowrap;
 }
 .map_point {
   cursor: pointer;
