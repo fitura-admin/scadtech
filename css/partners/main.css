@@ -1,4 +1,4 @@
-@import url("./carousel.css");
+@import "./carousel.css";
 
 .partners {
   display: flex;
