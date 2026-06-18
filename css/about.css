@@ -389,6 +389,7 @@
 .partner__elem > img, .customer__elem > img {
     display: block;
     width: 100%;
+    height: auto;
 }
 .title_customer {
     position: relative;
