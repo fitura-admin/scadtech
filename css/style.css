@@ -177,6 +177,7 @@ section {
   font-size: 8.33vw;
   display: flex;
   align-items: center;
+  justify-self: center;
 }
 @media (max-width: 960px) {
   .section1 > p {
