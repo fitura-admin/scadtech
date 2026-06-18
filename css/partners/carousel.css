@@ -16,11 +16,7 @@
 
 .partners--left,
 .partners--right {
-  --items-count: 15;
-}
-
-.partners--left:last-of-type {
-  --items-count: 8;
+  --items-count: 19;
 }
 
 .partners__c {
@@ -33,13 +29,18 @@
 .partners__c--left {
   display: flex;
   width: max-content;
-  animation: slideLeft 30s infinite linear;   
+  animation: slideLeft 40s infinite linear;   
 }
 
 .partners__c--right {
   display: flex;
   width: max-content;
-  animation: slideRight 30s infinite linear;
+  animation: slideRight 40s infinite linear;
+}
+
+.partners__c--right.partners--right,
+.partners__c--left.partners--left {
+  animation-duration: 60s;
 }
 
 .partners__c__block {
