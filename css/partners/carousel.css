@@ -5,7 +5,7 @@
   flex-direction: column;
   width: calc(100% - 20px);
 
-  gap: min(24px, 1.56vw);
+  gap: min(24px, 1.58vw);
   overflow-x: hidden;
 }
 
