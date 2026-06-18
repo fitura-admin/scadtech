@@ -3,13 +3,11 @@ let currentPartnersTab = "customers"; // "customers" or "partners"
 function updatePartnersLogos() {
     const customersLogos = document.getElementById("customers-logos");
     const partnersLogos = document.getElementById("partners-logos");
-    const pastPartnersLogos = document.getElementById("past-partners-logos");
-    if (!customersLogos || !partnersLogos || !pastPartnersLogos) return;
+    if (!customersLogos || !partnersLogos) return;
 
 
     customersLogos.style.display = currentPartnersTab !== "customers" ? "none" : "flex";
     partnersLogos.style.display = currentPartnersTab !== "partners" ? "none" : "flex";
-    pastPartnersLogos.style.display = currentPartnersTab !== "past-partners" ? "none" : "flex";
 }
 
 function switchPartnersTab(tab) {

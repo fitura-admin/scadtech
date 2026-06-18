@@ -9,11 +9,6 @@
   overflow-x: hidden;
 }
 
-.past--left,
-.past--right {
-  --items-count: 6;
-}
-
 .customers--left,
 .customers--right {
   --items-count: 7;
@@ -21,7 +16,7 @@
 
 .partners--left,
 .partners--right {
-  --items-count: 9;
+  --items-count: 15;
 }
 
 .partners--left:last-of-type {
@@ -38,13 +33,13 @@
 .partners__c--left {
   display: flex;
   width: max-content;
-  animation: slideLeft 20s infinite linear;   
+  animation: slideLeft 30s infinite linear;   
 }
 
 .partners__c--right {
   display: flex;
   width: max-content;
-  animation: slideRight 20s infinite linear;
+  animation: slideRight 30s infinite linear;
 }
 
 .partners__c__block {
