@@ -14,9 +14,11 @@
   --items-count: 7;
 }
 
-.partners--left,
-.partners--right {
+.partners--left {
   --items-count: 19;
+}
+.partners--right {
+  --items-count: 20;
 }
 
 .partners__c {
