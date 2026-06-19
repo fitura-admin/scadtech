@@ -177,7 +177,7 @@
     height: 100vh;
     overflow-y: scroll;
     background-color: var(--color-100grey);
-    z-index: 1001;
+    z-index: 1200;
     padding: 10px 10px 10% 10px;
 }
 .job_modal.active {
@@ -346,11 +346,13 @@
     top: calc(50vh - 175px);
     left: calc(50vw - 460px);
     width: 920px;
-    height: 350px;
     background-color: var(--color-pure_white);
     border-radius: 20px;
-    z-index: 1003;
+    z-index: 1200;
     padding: var(--padding-32);
+
+    flex-direction: column;
+    gap: var(--padding-32);
 }
 .job_modal_contakt.active {
     display: flex;
@@ -358,11 +360,9 @@
     justify-content: flex-end;
 }
 .close_job_modal_contakt {
-    position: absolute;
+    align-self: flex-end;
     width: 3.65vw;
     height: 3.65vw;
-    top: 1.66vw;
-    right: 1.66vw;
     cursor: pointer;
     transition: transform .2s;
 }
@@ -379,6 +379,27 @@
     font-family: g-Semibold;
 }
 
+.job_modal__person {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+
+    padding: var(--padding-32);
+    outline: 1px solid var(--color-400grey);
+    border-radius: 20px;
+
+    p,
+    a {
+        font-size: 24px !important;
+        font-weight: 500 !important;
+    }
+
+    a {
+        font-weight: 700 !important;
+    }
+}
+
 @media (max-width:960px) {
     .job_modal_contakt {
         display: none;
@@ -386,30 +407,30 @@
         top: calc(50vh - 90px);
         left: 2%;
         width: 96%;
-        height: 180px;
         border-radius: 14px;
-        z-index: 1003;
         padding: var(--padding-24_mob);
+        gap: var(--padding-24_mob);
     }
     .close_job_modal_contakt {
-        position: absolute;
         width: 9vw;
         height: 9vw;
-        top: 3.3vw;
-        right: 3.3vw;
     }
     .job_modal_contakt p {
         font-family: g-Semibold;
         font-size: var(--font-size24_mob);
     }
+
+    .job_modal__person {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        p,
+        a {
+            font-family: inherit;
+        }
+    }
 }
-
-
-
-
-
-
-
 
 
 .modal_job_callback {
@@ -705,5 +726,5 @@
     }
 }
 .black_window {
-    z-index: 1100;
+    z-index: 100;
 }

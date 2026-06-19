@@ -137,6 +137,7 @@ section {
 }
 .section1 {
   margin-top: 100vh;
+  overflow-x: hidden;
 }
 .section1 > img {
   width: 100%;
@@ -187,7 +188,7 @@ section {
     width: 86vw;
   }
   .section1 > img {
-    width: initial;
+    width: auto;
     height: 100%;
   }
   .section1__block {
