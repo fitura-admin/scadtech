@@ -242,6 +242,7 @@
     display: block;
     margin: 0;
     width: 100%;
+    border-radius: 20px;
 }
 .history__content__block__img p {
     margin-top: 1.5vw;
@@ -278,6 +279,7 @@
     width: 100%;
     display: block;
     margin: 0;
+    border-radius: 20px;
 }
 .mobile_accordeon {
     display: none;
